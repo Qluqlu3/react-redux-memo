@@ -57,17 +57,17 @@ function findReduce(state, action) {
 		data: state.data,
 		message: 'find "' + f + '":',
 		mode: 'find',
-		fdata: []
+		fdata: fdata
 	};
 }
 
 function deleteReduce(state, action) {
 	//新しい配列を生成するReduxの特性のため
 	let newData = state.data.slice();
-	newData.slice(action.index, 1);
+	newData.splice(action.index, 1);
 	return {
-		data: 'delete"' + action.index + '":',
-		message: 'delete',
+		data: newData,
+		message: 'delete"' + action.index + '":',
 		mode: 'delete',
 		fdata: []
 	}
@@ -83,13 +83,13 @@ export function addMemo(text) {
 export function deleteMemo(num) {
 	return {
 		type: 'DELETE',
-		message: num
+		index: num
 	}
 }
 
 export function findMemo(text) {
 	return {
-		tyoe: 'FIND',
+		type: 'FIND',
 		find: text
 	}
 }

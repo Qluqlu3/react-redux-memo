@@ -6,22 +6,20 @@ import { connect } from 'react-redux';
 import Memo from './memo/Memo';
 import AddForm from './memo/AddForm';
 import FindForm from './memo/FindForm';
-import DelFrom from './memo/DelForm';
-import MemoStore from './memo/Store';
-
+import DelForm from './memo/DelForm';
 
 class App extends Component {
 
 	td = {
 		width: '250px'
-	};
+	}
 
 	constructor(props) {
 		super(props);
 	}
 
 	render(){
-		return(
+		return (
 			<div>
 				<h1>Memo</h1>
 				<AddForm />
@@ -33,11 +31,12 @@ class App extends Component {
 								<FindForm />
 							</td>
 							<td style={this.td}>
-								<DelFrom />
+								<DelForm />
 							</td>
 						</tr>
 					</tbody>
 				</table>
+				<Memo />
 			</div>
 		);
 	}

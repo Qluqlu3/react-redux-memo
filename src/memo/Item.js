@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { render } from 'react-dom';
 
 class Item extends Component {
 
 	th = {
 		fontSize: '14pt',
-		backgrounfColor: 'blue',
+		backgroundColor: 'blue',
 		color: 'white',
 		padding: '5px 10px',
 		width: '50px'
@@ -14,7 +13,7 @@ class Item extends Component {
 
 	td = {
 		fontSize: '14pt',
-		backgrounfColor: 'white',
+		backgroundColor: 'white',
 		color: 'darkblue',
 		padding: '5px 10px',
 		border: '1px solid lightblue',
@@ -23,7 +22,7 @@ class Item extends Component {
 
 	date = {
 		fontSize: '14pt',
-		backgrounfColor: 'white',
+		backgroundColor: 'white',
 		color: "darkblue",
 		padding: '5px 10px',
 		border: '1px solid lightblue',

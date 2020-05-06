@@ -28,7 +28,7 @@ class Memo extends Component {
 
 			default:
 				data = this.props.data.map((value) => (
-					<Item key={value.maessage} value={value} index={n++} />
+					<Item key={value.message} value={value} index={n++} />
 				));
 		}
 		return (
